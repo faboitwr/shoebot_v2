@@ -17,7 +17,7 @@ def ins_func(s_det):
     conn.commit()
     conn.close()
 
-#return the current database
+#return the current database in alphabetical to enable binary search
 def database_return():
     conn = sqlite3.connect("shoebase.db")
 
@@ -35,53 +35,17 @@ def database_return():
 
     return curr_shoes
 
-#check if present
-def present_check(db, shoeN):
-    conn = sqlite3.connect(db)
-    
-    curs = conn.cursor()
-    
-    curs.execute(f"""
-        SELECT "ShoeN", "ShoeP", "Stock", "Sale" FROM "ShoeD"
-        WHERE ShoeN = ?
-                """, (shoeN,))
-
-    shoe_pres = curs.fetchone()
-
-    conn.commit()
-    conn.close()
-
-    return shoe_pres
-
-#getter function
-def db_get(salestock, blean, db):
-    conn = sqlite3.connect(db)
-    
-    curs = conn.cursor()
-    
-    curs.execute(f"""
-        SELECT "ShoeN", "ShoeP", "Stock", "Sale" FROM "ShoeD"
-        WHERE {salestock} = ?
-                """, (blean, ))
-
-    lst_unstock = curs.fetchall()
-
-    conn.commit()
-    conn.close()
-
-    return lst_unstock
-
 #updater
-def update(item, value, new_val, db):
+def update(lst, db):
     conn = sqlite3.connect(db)
     
     curs = conn.cursor()
 
     curs.execute(f"""
                 UPDATE "ShoeD"
-                SET {value} = '{new_val}'
+                SET 'ShoeP' = '{lst[1]}', 'Stock' = '{lst[2]}', 'Sale' = '{lst[3]}'
                 WHERE "ShoeN" = ?
-                 """, (item, ))
+                 """, (lst[0], ))
 
     conn.commit()
     conn.close()
