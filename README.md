@@ -1,4 +1,5 @@
 # Shoebot V2 (Incomplete)
-Libraries used:
-  - SQLite3
+Additional libraries used:
   - BeautifulSoup4
+  - SQLite3
+  - Requests
