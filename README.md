@@ -1,4 +1,4 @@
-# Shoebot V2 (Incomplete)
+# Shoebot V2 (To be tested. Currently Incomplete.)
 ## Introduction
 Scrapes climbing shoe website to update user on stock/sale changes
 ## Overview
