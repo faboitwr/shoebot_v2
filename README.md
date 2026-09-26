@@ -1,6 +1,6 @@
-# Shoebot V2 (To be tested. Currently Incomplete.)
+# Shoebot V2
 ## Introduction
-Scrapes climbing shoe website to update user on stock/sale changes
+Scrapes a climbing shoe website to update a user on stock/sale changes
 ## Overview
 Additional libraries used (Can be downloaded using pip install):
   - BeautifulSoup4
