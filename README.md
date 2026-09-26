@@ -1,6 +1,8 @@
 # Shoebot V2
 ## Introduction
-Scrapes a climbing shoe website to update a user on stock/sale changes
+Scrapes a climbing shoe website to update a user on stock/sale changes.
+Discord bot token & channel to be set up by individual users.
+
 ## Overview
 Additional libraries used (Can be downloaded using pip install):
   - BeautifulSoup4
