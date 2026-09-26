@@ -3,8 +3,8 @@ import discord
 
 from app_run import app, init
 
-bot_token = ""
-channel_ = 0
+bot_token = "" #to be filled by user
+channel_ = 0 #to be filled by user
 
 bot = commands.Bot(command_prefix = "!", intents = discord.Intents.all())
 
