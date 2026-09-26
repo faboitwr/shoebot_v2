@@ -3,9 +3,9 @@
 import sqlite3
 
 #inserter function
-def ins_func(s_det):
+def ins_func(s_det, db):
     #assume s_det takes format of (date 0, vendid 1, vendname 2, spendid 3, cost 4, comments 5, class 6)
-    conn = sqlite3.connect("shoebase.db")
+    conn = sqlite3.connect(db)
     
     print(s_det)
 
@@ -18,8 +18,8 @@ def ins_func(s_det):
     conn.close()
 
 #return the current database in alphabetical to enable binary search
-def database_return():
-    conn = sqlite3.connect("shoebase.db")
+def database_return(db):
+    conn = sqlite3.connect(db)
 
     curs = conn.cursor()
 

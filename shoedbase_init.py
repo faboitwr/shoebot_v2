@@ -5,8 +5,8 @@ from shoedb_helpers import ins_func
 from scraper import scraper
 
 #database creation
-def init_func():
-    conn = sqlite3.connect("shoebase.db")
+def init_func(db):
+    conn = sqlite3.connect(db)
     conn.execute("""
     CREATE TABLE "ShoeD" (
         "ShoeID" INTEGER NOT NULL,

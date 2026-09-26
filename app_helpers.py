@@ -1,7 +1,5 @@
 #app_helper functions
 
-from shoedb_helpers import database_return, update
-
 #to efficiently find shoe details from sorted list
 def binary_s(lst, item):
     def binary_s_sub(lst, item, low, high):
@@ -19,4 +17,4 @@ def binary_s(lst, item):
 
 #to find what has changed
 def changes(old, new_scrape):
-    return list(set(new_scrape) - set(old))
+    return list(set(new_scrape) - (set(old)))
